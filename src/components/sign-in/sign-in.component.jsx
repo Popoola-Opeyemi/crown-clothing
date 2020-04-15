@@ -12,23 +12,26 @@ class SignIn extends React.Component{
       password:""
     }
   }
+
   handleSubmit = (event) => {
     event.PreventDefault();
 
     this.setState({email:'', password:''})
   }
+  
   handleChange = (event) => { 
     const {value, name} = event
     this.setState({[name]:value})
   }
+  
   render(){
     return (
       <div className="sign-in">
         <h1>I already have an  account </h1>
         <span>Sign in with your email and password</span>
         <form onSubmit={this.handleSubmit}>
-          <FormInput type="email" handleChange={this.handleChange} value={this.state.email} label="email" required/>
-          <FormInput type="password" handleChange={this.handleChange} value={this.state.password} label="password" required/>
+          <FormInput type="email" handleChange={this.handleChange} value={this.state.email} label="Email" required/>
+          <FormInput type="password" handleChange={this.handleChange} value={this.state.password} label="Password" required/>
           <div className="buttons">
             <CustomButton type="submit"> Sign In</CustomButton>
             <CustomButton onClick={signInWithGoogle } isGoogleSignIn > Sign In with Google</CustomButton>
