@@ -8,7 +8,6 @@ import CartIcon  from "../cart-icon/cart-icon.component"
 import CartDropdown from "../cart-dropdown/card-dropdown.component"
 
 
-
 const Header = ({currentUser, hidden}) => (
   <div className="header">
     <Link to="/" className="logo-container">
